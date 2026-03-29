@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.10
-Date: 2026-03-13
+Date: 2026-03-29
   Compatibility:
     - Added setting to disable the orbit adjustment of maraxsis
     - Added exception for Better planets mod to move maraxsis orbit
