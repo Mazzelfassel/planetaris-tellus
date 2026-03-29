@@ -5,7 +5,7 @@ Date: 2026-03-29
     - Added setting to disable the orbit adjustment of maraxsis
     - Added exception for Better planets mod to move maraxsis orbit
   Bugfixes:
-    - Fixed some recipes bering able to be  recycled
+    - Fixed some recipes being able to be  recycled
     - Fixed overgrowth mycelia and chlorophyll items having wrong tile conditions
     - Fixed locale errors
     - Fixed mycelia tiles not matching colors
