@@ -1159,6 +1159,7 @@ data:extend({
       }
     },
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       {type = "item",  name = "planetaris-root", amount = 2},
       {type = "item",  name = "engine-unit", amount = 1},
@@ -1188,6 +1189,7 @@ data:extend({
       }
     },
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       {type = "item",  name = "planetaris-root", amount = 2},
       {type = "item",  name = "storage-tank", amount = 1},
@@ -1216,6 +1218,7 @@ data:extend({
       }
     },
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       {type = "item",  name = "planetaris-root", amount = 2},
       {type = "item",  name = "engine-unit", amount = 1},
@@ -1245,6 +1248,7 @@ data:extend({
       }
     },
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       {type = "item",  name = "planetaris-root", amount = 10},
     },

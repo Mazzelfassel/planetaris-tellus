@@ -1102,11 +1102,13 @@ data:extend({
         "wetland-light-cyan-slime",
         "wetland-cyan-slime",
         "wetland-chlorophyll",
-        "lowland-cyan-blubber",
-        "lowland-cyan-blubber-2",
-        "lowland-cyan-blubber-3",
-        "lowland-blue-blubber",
-        "lowland-pale-cyan"
+        "lowland-green-vein",
+        "lowland-green-vein-2",
+        "lowland-green-vein-3",
+        "lowland-green-vein-4",
+        "lowland-green-vein-dead",
+        "lowland-green-infection",
+        "lowland-cream-green"
       }
     }
   },
@@ -1155,13 +1157,11 @@ data:extend({
         "wetland-tellus-green-tentacle",
         "wetland-tellus-light-green-tentacle",
         "wetland-mycelia",
-        "lowland-green-vein",
-        "lowland-green-vein-2",
-        "lowland-green-vein-3",
-        "lowland-green-vein-4",
-        "lowland-green-vein-dead",
-        "lowland-green-infection",
-        "lowland-cream-green"
+        "lowland-cyan-blubber",
+        "lowland-cyan-blubber-2",
+        "lowland-cyan-blubber-3",
+        "lowland-blue-blubber",
+        "lowland-pale-cyan"
       }
     }
   },

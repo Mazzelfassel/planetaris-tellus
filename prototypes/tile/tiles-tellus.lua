@@ -101,7 +101,7 @@ data:extend({
     landing_steps_sound = tile_sounds.landing.semi_wet,
     driving_sound = tile_sounds.driving.wetland,
     build_sound = base_tile_sounds.building.landfill,
-    map_color={204, 183, 6},
+    map_color={6, 201, 204},
     scorch_mark_color = {r = 0.329, g = 0.242*2, b = 0.177, a = 1.000}
   },
   {
@@ -135,7 +135,7 @@ data:extend({
     landing_steps_sound = tile_sounds.landing.semi_wet,
     driving_sound = tile_sounds.driving.wetland,
     build_sound = base_tile_sounds.building.landfill,
-    map_color={204, 183, 6},
+    map_color={2, 186, 189},
     scorch_mark_color = {r = 0.329, g = 0.242*2, b = 0.177, a = 1.000}
   },
   {
@@ -167,7 +167,7 @@ data:extend({
     walking_sound = tile_sounds.walking.semi_wet,
     landing_steps_sound = tile_sounds.landing.semi_wet,
     build_sound = base_tile_sounds.building.landfill,
-    map_color={185, 166, 5},
+    map_color={5, 162, 176},
     scorch_mark_color = {r = 0.329, g = 0.242*2, b = 0.177, a = 1.000}
   },
     {
