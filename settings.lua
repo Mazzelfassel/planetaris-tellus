@@ -55,3 +55,14 @@ if mods["celestial-weather"] then
 	})
 end
 
+if mods["maraxsis"] then
+	data.extend({
+		{
+		type = "bool-setting",
+		name = "adjust-maraxsis",
+		setting_type = "startup",
+		default_value = true,
+		order = "d-a",
+		},
+	})
+end
