@@ -147,13 +147,13 @@ function PlanetarisLib.add_science_pack(lab_name, pack_name)
         PlanetarisLib.error("Lab"..lab_name.."input not found")
     end
   
-    for _, packs in ipairs(lab.input) do
+    for _, packs in ipairs(lab.inputs) do
         if packs[1] == pack_name then
         return  -- Already has it
         end
     end
   
-    table.insert(lab.input, pack_name)
+    table.insert(lab.inputs, pack_name)
 end
 
 ---------------------------------------------------------------------------
