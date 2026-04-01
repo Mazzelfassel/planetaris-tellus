@@ -2,7 +2,6 @@
 
 require("PlanetarisLib")
 
-
 table.insert(data.raw.item.landfill.place_as_tile.tile_condition, "wetland-tellus-light-dead-skin")
 table.insert(data.raw.item.landfill.place_as_tile.tile_condition, "wetland-tellus-dead-skin")
 table.insert(data.raw.item.landfill.place_as_tile.tile_condition, "wetland-light-cyan-slime")
