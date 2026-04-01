@@ -230,20 +230,4 @@ data:extend({
       },
 })
 
-if data.raw["planet"]["maraxsis"] then
-  data:extend({
-      {
-          type = "space-connection",
-          name = "maraxsis-tellus",
-          subgroup = "planet-connections",
-          from = "maraxsis",
-          to = "tellus", 
-          length = 15000,
-          icon_size = 64,
-          order = "d-b",
-          asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.gleba_aquilo)
-      }
-  })
-end
-
 PlanetsLib.borrow_music(data.raw["planet"]["gleba"], data.raw["planet"]["tellus"])
