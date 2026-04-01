@@ -16,8 +16,11 @@ table.insert(data.raw.item.landfill.place_as_tile.tile_condition, "wetland-mycel
 table.insert(data.raw.item.landfill.place_as_tile.tile_condition, "tellus-deep-lake");
 
 -- Adding science packs
-table.insert(data.raw.lab["lab"].inputs, "planetaris-bioengineering-science-pack")
-table.insert(data.raw.lab["lab"].inputs, "planetaris-pathological-science-pack")
+PlanetarisLib.add_science_pack("lab", "planetaris-bioengineering-science-pack")
+PlanetarisLib.add_science_pack("lab", "planetaris-pathological-science-pack")
+
+PlanetarisLib.add_science_pack("biolab", "planetaris-bioengineering-science-pack")
+PlanetarisLib.add_science_pack("biolab", "planetaris-pathological-science-pack")
 
 -- New category to Biochamber
 table.insert(data.raw["assembling-machine"]["biochamber"].crafting_categories, "planetaris-bioassembling-or-organic-or-hand-crafting")

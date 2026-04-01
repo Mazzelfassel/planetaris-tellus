@@ -129,6 +129,32 @@ function PlanetarisLib.table_contains(t, value)
 	return false
 end
 
+---------------------------------------------------------------------------
+------------------------- Items
+---------------------------------------------------------------------------
+
+--- Add science pack if missing
+--- @param lab_name string
+--- @param pack_name string
+function PlanetarisLib.add_science_pack(lab_name, pack_name)
+    local lab = data.raw.lab[lab_name]
+    if not lab then 
+        PlanetarisLib.error("Lab:"..lab_name.."dont exist")
+    return
+    end
+
+    if not not lab.inputs then
+        PlanetarisLib.error("Lab"..lab_name.."input not found")
+    end
+  
+    for _, packs in ipairs(lab.input) do
+        if packs[1] == pack_name then
+        return  -- Already has it
+        end
+    end
+  
+    table.insert(lab.input, pack_name)
+end
 
 ---------------------------------------------------------------------------
 ------------------------- Recipes
@@ -279,6 +305,16 @@ function PlanetarisLib.set_recipe_category(recipe_name, category)
         return
     end
     recipe.crafting_categories = category
+end
+
+--- Hide recipe in factoriopedia
+--- @param recipe_name string
+function PlanetarisLib.hide_recipe_factoriopedia(recipe_name)
+	local recipe = data.raw.recipe[recipe_name]
+	if not recipe then
+        return
+    end
+    recipe.hidden_in_factoriopedia = true
 end
 
 ---------------------------------------------------------------------------
