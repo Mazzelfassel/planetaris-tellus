@@ -35,11 +35,6 @@ script.on_event(defines.events.on_entity_cloned, function(event)
   replacement.on_entity_cloned(event)
 end)
 
--- Handle cursor stack changed (for building preview)
---script.on_event(defines.events.on_player_cursor_stack_changed, function(event)
---   replacement.on_player_cursor_stack_changed(event)
---end)
-
 script.on_event(defines.events.on_player_setup_blueprint, function(event)
   replacement.on_player_setup_blueprint(event)
 end)
@@ -63,8 +58,6 @@ end)
 script.on_event(defines.events.on_player_cursor_stack_changed, function(event)
   replacement.on_cursor_stack_changed(event)
 end)
-
--- script.on_event(defines.events.on_player_toggled_alt_mode, spoil.on_player_toggled_alt_mode)
 
 script.on_event(defines.events.on_research_finished, function(event)
   preservation_tech.on_research_finished(event)

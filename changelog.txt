@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.14
+Date: 2026-04-05
+  Optimizations:
+    - Improve performance of space preservation
+  Changes:
+    - Moved air purifier to the enviromental protection category
+  Compatibility:
+    - Added support for the science group mod
+---------------------------------------------------------------------------------------------------
 Version: 1.0.13
 Date: 2026-04-01
   Bugfixes:
