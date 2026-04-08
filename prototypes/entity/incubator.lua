@@ -264,7 +264,7 @@ data.extend({
     },
       energy_usage = "5MW",
       module_slots = 4,
-      allowed_effects = {"consumption", "pollution", "productivity", "quality"},
+      allowed_effects = {"speed", "consumption", "pollution", "productivity", "quality"},
       effect_receiver = { base_effect = { productivity = 0.5 }},
       graphics_set =
       {

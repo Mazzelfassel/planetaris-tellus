@@ -304,7 +304,7 @@ end
     },
       energy_usage = "5MW",
       module_slots = 4,
-      allowed_effects = {"consumption", "pollution", "productivity", "quality"},
+      allowed_effects = {"speed", "consumption", "pollution", "productivity", "quality"},
       graphics_set =
       {
         animation =
