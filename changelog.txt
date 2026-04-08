@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.15
+Date: 2026-04-09
+  Optimizations:
+    - Improve performance of the bioassembler and incubator
+  Changes:
+    - Dead bioassemblers and incubators are no longer affected by the speed effects
+  Graphics:
+    - Changed magnesium sheet icon
+  Bugfixes:
+    - Fixed desync errors
+---------------------------------------------------------------------------------------------------
 Version: 1.0.14
 Date: 2026-04-05
   Optimizations:

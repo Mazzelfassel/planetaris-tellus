@@ -236,6 +236,13 @@ end
       fixed_recipe = "planetaris-revive-bioassembler",
       factoriopedia_alternative = "planetaris-bioassembler",
       crafting_speed = 1,
+      crafting_speed_quality_multiplier = {
+        ["normal"] = 1,
+        ["uncommon"] = 1,
+        ["rare"] = 1,
+        ["epic"] = 1,
+        ["legendary"] = 1,
+      },
 
       return_ingredients_on_change = true,
         production_health_effect =
@@ -297,7 +304,7 @@ end
     },
       energy_usage = "5MW",
       module_slots = 4,
-      allowed_effects = {"speed", "consumption", "pollution", "productivity", "quality"},
+      allowed_effects = {"consumption", "pollution", "productivity", "quality"},
       graphics_set =
       {
         animation =

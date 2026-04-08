@@ -10,6 +10,7 @@ script.on_init(function()
   storage.growing_plants = {}
   storage.corpse_data = {}
   seed.init_storage()
+  spoil.on_init()
   preservation_tech.on_init()
   replacement.replace_all_existing()
 end)
@@ -18,7 +19,19 @@ script.on_configuration_changed(function()
   storage.growing_plants = storage.growing_plants or {}
   storage.corpse_data = storage.corpse_data or {}
   preservation_tech.on_configuration_changed()
+  spoil.on_configuration_changed()
   replacement.replace_all_existing()
+  
+  -- Force re-register nth_tick in case old save didn't have it
+  script.on_nth_tick(60, function(event)
+    seed.check_growth(event)
+    spoil.revive_bioassembler(event)
+    preservation_tech.process_preservation()
+  end)
+
+  script.on_nth_tick(61, function(event)
+    seed.check_growth(event)
+  end)
 end)
 
 script.on_event(defines.events.on_built_entity, function(event)
@@ -64,9 +77,12 @@ script.on_event(defines.events.on_research_finished, function(event)
 end)
 
 script.on_nth_tick(60, function(event)
-  seed.check_growth(event)
   spoil.revive_bioassembler(event)
-  preservation_tech.process_preservation(event)
+  preservation_tech.process_preservation()
+end)
+
+script.on_nth_tick(61, function(event)
+  seed.check_growth(event)
 end)
 
 -- script.on_nth_tick(10, function(event)

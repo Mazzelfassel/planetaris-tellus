@@ -195,6 +195,13 @@ data.extend({
       fixed_recipe = "planetaris-revive-incubator",
       factoriopedia_alternative = "planetaris-incubator",
       crafting_speed = 5,
+      crafting_speed_quality_multiplier = {
+        ["normal"] = 1,
+        ["uncommon"] = 1,
+        ["rare"] = 1,
+        ["epic"] = 1,
+        ["legendary"] = 1,
+      },
 
       return_ingredients_on_change = true,
         production_health_effect =
@@ -257,7 +264,7 @@ data.extend({
     },
       energy_usage = "5MW",
       module_slots = 4,
-      allowed_effects = {"speed", "consumption", "pollution", "productivity", "quality"},
+      allowed_effects = {"consumption", "pollution", "productivity", "quality"},
       effect_receiver = { base_effect = { productivity = 0.5 }},
       graphics_set =
       {
