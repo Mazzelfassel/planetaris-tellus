@@ -28,10 +28,6 @@ script.on_configuration_changed(function()
     spoil.revive_bioassembler(event)
     preservation_tech.process_preservation()
   end)
-
-  script.on_nth_tick(61, function(event)
-    seed.check_growth(event)
-  end)
 end)
 
 script.on_event(defines.events.on_built_entity, function(event)
@@ -78,11 +74,8 @@ end)
 
 script.on_nth_tick(60, function(event)
   spoil.revive_bioassembler(event)
-  preservation_tech.process_preservation()
-end)
-
-script.on_nth_tick(61, function(event)
   seed.check_growth(event)
+  preservation_tech.process_preservation()
 end)
 
 -- script.on_nth_tick(10, function(event)
