@@ -10,7 +10,7 @@ if settings.startup["adjust-maraxsis"].value == true then
         data.raw["space-connection"]["vulcanus-maraxsis"] = nil
     end
 
-    if data.raw["space-connection"]["fulgora-maraxsis"] and data.raw["planet"]["hyarion"] then
+    if data.raw["space-connection"]["fulgora-maraxsis"] then
         data.raw["space-connection"]["fulgora-maraxsis"] = nil
     end
 

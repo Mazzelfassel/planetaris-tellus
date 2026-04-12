@@ -56,6 +56,7 @@ local function rebuild_assembler(corpse, data)
   local surface = corpse.surface
   local position = corpse.position
   local direction = corpse.direction
+  local mirroring = corpse.mirroring
   local force = corpse.force
   local quality = corpse.quality
 
@@ -63,6 +64,7 @@ local function rebuild_assembler(corpse, data)
     name = data.original_assembler,
     position = position,
     direction = direction,
+    mirroring = mirroring,
     force = force,
     quality = quality
   }
@@ -216,6 +218,7 @@ local function on_entity_died(event)
     name = corpse_name,
     position = position,
     direction = entity.direction,
+    mirroring = entity.mirroring,
     force = entity.force,
     quality = entity.quality
   }
