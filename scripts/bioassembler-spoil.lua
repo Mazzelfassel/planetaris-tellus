@@ -175,7 +175,24 @@ local function rebuild_assembler(corpse, data)
   end
 end
 
+local function create_ghost(entity)
+  local original_name = corpse_to_assembler[entity.name]
+  if not original_name then return end
 
+  local corpse_data = storage.corpse_data[entity.unit_number]
+
+  entity.surface.create_entity{
+    name = "entity-ghost",
+    position = entity.position,
+    direction = corpse_data and corpse_data.direction or entity.direction,
+    mirroring = corpse_data and corpse_data.mirroring or nil,
+    force = entity.force,
+    inner_name = original_name,
+    quality = corpse_data and corpse_data.quality or "normal",
+    recipe = corpse_data and corpse_data.recipe or nil,
+    expires = false,
+  }
+end
 
 -- on_entity_died
 local function on_entity_died(event)
@@ -202,6 +219,7 @@ local function on_entity_died(event)
       if corpse_data.rendering and corpse_data.rendering.valid then
         corpse_data.rendering.destroy()
       end
+      create_ghost(entity)
       storage.corpse_data[entity.unit_number] = nil
     end
     return
@@ -220,7 +238,7 @@ local function on_entity_died(event)
     direction = entity.direction,
     mirroring = entity.mirroring,
     force = entity.force,
-    quality = entity.quality
+    quality = entity.quality,
   }
 
   if corpse and corpse.valid then
@@ -305,6 +323,9 @@ local function on_entity_died(event)
       entity = corpse,
       ingredients = ingredients,
       products = products,
+      quality = entity.quality.name,
+      direction = entity.direction,
+      mirroring = entity.mirroring,
     }
 
     local module_inv = entity.get_inventory(defines.inventory.assembling_machine_modules)

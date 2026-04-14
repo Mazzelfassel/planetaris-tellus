@@ -1,24 +1,38 @@
 data.extend({
+	{
+		type = "bool-setting",
+		name = "tellus-easy-not-damage-while-stop",
+		setting_type = "startup",
+		default_value = false,
+		order = "a-b-a",
+	},
+	{
+		type = "bool-setting",
+		name = "tellus-easy-longer-spoiling",
+		setting_type = "startup",
+		default_value = false,
+		order = "a-b-b",
+	},
     {
 		type = "bool-setting",
 		name = "tellus-packs-for-aquilo",
 		setting_type = "startup",
 		default_value = true,
-		order = "a-b-a",
+		order = "b-b-a",
 	},
 	{
 		type = "bool-setting",
 		name = "tellus-packs-for-promethium",
 		setting_type = "startup",
 		default_value = true,
-		order = "a-b-a",
+		order = "b-b-a",
 	},
 	{
 		type = "bool-setting",
 		name = "tellus-no-enemies",
 		setting_type = "startup",
 		default_value = false,
-		order = "a-b-b",
+		order = "b-b-b",
 	}
 })
 

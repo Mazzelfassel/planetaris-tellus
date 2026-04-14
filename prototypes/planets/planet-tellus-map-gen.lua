@@ -1267,6 +1267,6 @@ data:extend({
     type = "noise-expression",
     name = "tellus_enemy_base_frequency",
     -- bases_per_km2 = 10 + 3 * enemy_base_intensity
-    expression = "(0.0002 + 0.000006 * enemy_base_intensity) * control:tellus_enemy_base:frequency" -- og: (0.00002 + 0.000006 * enemy_base_intensity) * control:tellus_enemy_base:frequency
+    expression = "(0.00010 + 0.000006 * enemy_base_intensity) * control:tellus_enemy_base:frequency" -- og: (0.00002 + 0.000006 * enemy_base_intensity) * control:tellus_enemy_base:frequency
   }
 })

@@ -171,6 +171,7 @@ data:extend({
         {type = "item", name = "electronic-circuit", amount = 5},
         {type = "item", name = "planetaris-myceliae-seed", amount = 1},
         {type = "item", name = "planetaris-chloroplast-seed", amount = 1},
+        {type = "item", name = "nutrients", amount = 5}
       },
     results = {{type="item", name="planetaris-bioassembler-seed", amount=1}}
   },
@@ -191,7 +192,8 @@ data:extend({
     emissions_multiplier = 5,
     ingredients = {
       {type = "fluid", name = "planetaris-infected-water", amount = 50},
-      {type = "item", name = "planetaris-magnesium-bacteria", amount = 3}
+      {type = "item", name = "planetaris-magnesium-bacteria", amount = 3},
+      {type = "item", name = "nutrients", amount = 1}
     },
     results =
     {
@@ -307,7 +309,10 @@ data:extend({
     auto_recycle = false,
     allow_productivity = false,
     energy_required = 1,
-    ingredients = {{type = "item", name = "planetaris-chloroplast-fruit", amount = 1}},
+    ingredients = {
+      {type = "item", name = "planetaris-chloroplast-fruit", amount = 1},
+      {type = "item", name = "nutrients", amount = 1}
+    },
     results =
     {
       {type = "item", name = "planetaris-chloroplast-seed", amount = 1, probability = 0.02},
@@ -337,7 +342,10 @@ data:extend({
     enabled = false,
     auto_recycle = false,
     energy_required = 1,
-    ingredients = {{type = "item", name = "planetaris-mushroom-cap", amount = 1}},
+    ingredients = {
+      {type = "item", name = "planetaris-mushroom-cap", amount = 1},
+      {type = "item", name = "nutrients", amount = 1}
+    },
     results =
     {
       {type = "item", name = "planetaris-myceliae-seed", amount = 1, probability = 0.02},
@@ -363,8 +371,11 @@ data:extend({
     allow_productivity = true,
     order = "a[natural]-e[nutrients]-a",
     energy_required = 4,
-    ingredients = {{type = "item", name = "planetaris-chloroplast-mash", amount = 4}},
-    results = {{type="item", name="nutrients", amount=6}},
+    ingredients = {
+      {type = "item", name = "planetaris-chloroplast-mash", amount = 4},
+      {type = "item", name = "nutrients", amount = 1}
+  },
+    results = {{type="item", name="nutrients", amount=8}},
     crafting_machine_tint =
     {
       primary = {r = 0.8, g = 0.9, b = 1, a = 1.000},
@@ -382,8 +393,11 @@ data:extend({
     allow_productivity = true,
     order = "a[natural]-e[nutrients]-b",
     energy_required = 4,
-    ingredients = {{type = "item", name = "planetaris-mycelia", amount = 4}},
-    results = {{type="item", name="nutrients", amount=6}},
+    ingredients = {
+      {type = "item", name = "planetaris-mycelia", amount = 4},
+      {type = "item", name = "nutrients", amount = 1}
+    },
+    results = {{type="item", name="nutrients", amount=8}},
     crafting_machine_tint =
     {
       primary = {r = 0.8, g = 0.9, b = 1, a = 1.000},
@@ -413,6 +427,7 @@ data:extend({
       {type = "fluid", name = "water", amount = 10},
       {type = "item",  name = "planetaris-mycelia", amount = 5},
       {type = "item",  name = "wood", amount = 2},
+      {type = "item", name = "nutrients", amount = 2}
     },
     results =
     {
@@ -445,7 +460,8 @@ data:extend({
     ingredients = {
       {type = "fluid", name = "water", amount = 10},
       {type = "item", name = "planetaris-chloroplast-mash", amount = 5},
-      {type = "item", name = "planetaris-compost", amount = 2}
+      {type = "item", name = "planetaris-compost", amount = 2},
+      {type = "item", name = "nutrients", amount = 2}
     },
     results =
     {
@@ -478,7 +494,8 @@ data:extend({
     ingredients = {
       {type = "fluid", name = "planetaris-seed-compound", amount = 15},
       {type = "item",  name = "planetaris-magnesium-sheet", amount = 2},
-      {type = "item",  name = "planetaris-mycelia-composite", amount = 5}
+      {type = "item",  name = "planetaris-mycelia-composite", amount = 5},
+      {type = "item", name = "nutrients", amount = 5}
     },
     results =
     {
@@ -514,6 +531,7 @@ data:extend({
       {type = "fluid", name = "planetaris-chlorophyll", amount = 10},
       {type = "item",  name = "planetaris-magnesium-bacteria", amount = 5},
       {type = "item",  name = "planetaris-wasp-egg", amount = 1},
+      {type = "item", name = "nutrients", amount = 1}
     },
     results =
     {
@@ -553,6 +571,7 @@ data:extend({
       {type = "fluid", name = "water", amount = 10},
       {type = "item",  name = "planetaris-mycelia", amount = 3},
       {type = "item",  name = "planetaris-magnesium-dust", amount = 1},
+      {type = "item",  name = "nutrients", amount = 1}
     },
     results =
     {
@@ -579,7 +598,8 @@ data:extend({
     auto_recycle = false,
     ingredients =
     {
-      {type = "item", name = "planetaris-chloroplast-mash", amount = 60}
+      {type = "item", name = "planetaris-chloroplast-mash", amount = 60},
+      {type = "item", name = "nutrients", amount = 1}
     },
     results =
     {
@@ -613,7 +633,8 @@ data:extend({
     ingredients =
     {
       {type = "item", name = "planetaris-mycelia", amount = 1},
-      {type = "item", name = "planetaris-mushroom-cap", amount = 1}
+      {type = "item", name = "planetaris-mushroom-cap", amount = 1},
+      {type = "item", name = "nutrients", amount = 1}
     },
     results =
     {
@@ -645,6 +666,7 @@ data:extend({
     ingredients =
     {
       {type = "item", name = "planetaris-chloroplast-mash", amount = 3},
+      {type = "item", name = "nutrients", amount = 1}
     },
     results =
     {
@@ -674,7 +696,8 @@ data:extend({
     {
       {type = "fluid", name = "water", amount = 30},
       {type = "item", name =  "planetaris-chloroplast-mash", amount = 30},
-      {type = "item", name = "bioflux", amount = 2}
+      {type = "item", name = "bioflux", amount = 2},
+      {type = "item", name = "nutrients", amount = 1}
     },
     results = {{type="item", name="rocket-fuel", amount=1}},
     crafting_machine_tint =
@@ -709,6 +732,7 @@ data:extend({
       {type = "item", name = "planetaris-wasp-egg", amount = 2},
       {type = "item",  name = "copper-bacteria", amount = 1},
       {type = "item",  name = "iron-bacteria", amount = 1},
+      {type = "item", name = "nutrients", amount = 2}
     },
     results =
     {
@@ -960,7 +984,8 @@ data:extend({
     ingredients =
     {
       {type = "item", name = "planetaris-compost", amount = 12},
-      {type = "item", name = "planetaris-chloroplast-mash", amount = 12}
+      {type = "item", name = "planetaris-chloroplast-mash", amount = 12},
+      {type = "item", name = "nutrients", amount = 1}
     },
     results = {{type="item", name="bioflux", amount=4}},
     crafting_machine_tint =
@@ -995,6 +1020,7 @@ data:extend({
       {type = "item",  name = "planetaris-nauvian-parasite", amount = 1},
       {type = "item",  name = "spoilage", amount = 10},
       {type = "item",  name = "iron-bacteria", amount = 2},
+      {type = "item", name = "nutrients", amount = 2}
     },
     results =
     {
@@ -1029,6 +1055,7 @@ data:extend({
       {type = "item",  name = "planetaris-glebian-parasite", amount = 1},
       {type = "item",  name = "planetaris-mycelia", amount = 10},
       {type = "item",  name = "copper-bacteria", amount = 2},
+      {type = "item", name = "nutrients", amount = 2}
     },
     results =
     {
@@ -1067,6 +1094,7 @@ data:extend({
       {type = "item", name = "planetaris-nauvian-parasite", amount = 1, ignored_by_stats = 1},
       {type = "item", name = "planetaris-glebian-parasite", amount = 1, ignored_by_stats = 1},
       {type = "item", name = "planetaris-polimer-skin", amount = 5},
+      {type = "item", name = "nutrients", amount = 5},
       {type = "fluid", name = "water", amount = 60}
     },
     results =
@@ -1101,7 +1129,8 @@ data:extend({
     ingredients = {
       {type = "item", name = "planetaris-wasp-egg", amount = 1},
       {type = "item",  name = "planetaris-magnesium-dust", amount = 5},
-      {type = "item",  name = "plastic-bar", amount = 2}
+      {type = "item",  name = "plastic-bar", amount = 2},
+      {type = "item", name = "nutrients", amount = 1}
     },
     results =
     {
@@ -1134,6 +1163,7 @@ data:extend({
     ingredients = {
       {type = "item",  name = "wood", amount = 1},
       {type = "item",  name = "planetaris-magnesium-dust", amount = 1},
+      {type = "item", name = "nutrients", amount = 1}
     },
     results =
     {
@@ -1275,6 +1305,7 @@ data:extend({
       {type = "item",  name = "planetaris-carbolyte-pod", amount = 1},
       {type = "item",  name = "landfill", amount = 5},
       {type = "fluid", name = "planetaris-seed-compound", amount = 20},
+      {type = "item", name = "nutrients", amount = 1}
     },
     results =
     {
@@ -1339,6 +1370,7 @@ data:extend({
     auto_recycle = false,
     ingredients = {
       {type = "item",  name = "planetaris-carbolyte-crust", amount = 1},
+      {type = "item", name = "nutrients", amount = 1}
     },
     results =
     {
@@ -1365,6 +1397,7 @@ data:extend({
       {type = "item",  name = "planetaris-holmiumnite-pod", amount = 1},
       {type = "item",  name = "landfill", amount = 5},
       {type = "fluid", name = "planetaris-seed-compound", amount = 20},
+      {type = "item", name = "nutrients", amount = 1}
     },
     results =
     {
@@ -1557,7 +1590,8 @@ data:extend({
     {
       {type = "item",  name = "planetaris-chloroplast-seed", amount = 2},
       {type = "fluid", name = "planetaris-seed-compound", amount = 20},
-      {type = "item",  name = "landfill", amount = 5}
+      {type = "item",  name = "landfill", amount = 5},
+      {type = "item", name = "nutrients", amount = 1}
     },
     results = {{type="item", name="planetaris-artificial-chlorophyll-soil", amount=10}}
   },
@@ -1583,7 +1617,8 @@ data:extend({
       {type = "item", name = "planetaris-chloroplast-seed", amount = 5},
       {type = "item", name = "planetaris-wasp-egg", amount = 10},
       {type = "item", name = "planetaris-magnesium-dust", amount = 50},
-      {type=  "fluid", name= "planetaris-chlorophyll", amount=100}
+      {type=  "fluid", name= "planetaris-chlorophyll", amount=100},
+      {type = "item", name = "nutrients", amount = 1}
     },
     results = {{type="item", name="planetaris-overgrowth-chlorophyll-soil", amount=1}}
   },
@@ -1607,7 +1642,8 @@ data:extend({
     {
       {type = "item", name = "planetaris-myceliae-seed", amount = 2},
       {type = "fluid", name = "planetaris-seed-compound", amount = 20},
-      {type = "item", name = "landfill", amount = 5}
+      {type = "item", name = "landfill", amount = 5},
+      {type = "item", name = "nutrients", amount = 1}
     },
     results = {{type="item", name="planetaris-artificial-mycelia-soil", amount=10}}
   },
@@ -1633,7 +1669,8 @@ data:extend({
       {type = "item", name = "planetaris-myceliae-seed", amount = 5},
       {type = "item", name = "planetaris-wasp-egg", amount = 10},
       {type = "item", name = "planetaris-magnesium-dust", amount = 50},
-      {type=  "fluid", name= "water", amount=100}
+      {type=  "fluid", name= "water", amount=100},
+      {type = "item", name = "nutrients", amount = 1}
     },
     results = {{type="item", name="planetaris-overgrowth-mycelia-soil", amount=1}}
   },
@@ -1662,6 +1699,7 @@ data:extend({
       {type = "item",  name = "planetaris-parasite-nest",      amount = 1},
       {type = "item",  name = "planetaris-carbolyte-bacteria", amount = 2},
       {type = "item",  name = "planetaris-fulgoran-bacteria",  amount = 2},
+      {type = "item", name = "nutrients", amount = 5}
     },
     results =
     {
@@ -1741,6 +1779,7 @@ data:extend({
   {
     type = "recipe",
     name = "planetaris-robowasp-port",
+    category = "electromagnetics",
     surface_conditions =
     {
       {
@@ -1762,6 +1801,7 @@ data:extend({
   {
     type = "recipe",
     name = "planetaris-logistic-robowasp",
+    category = "electromagnetics",
     surface_conditions =
     {
       {
@@ -1785,6 +1825,7 @@ data:extend({
   {
     type = "recipe",
     name = "planetaris-three-long-handed-inserter",
+    category = "electromagnetics",
     enabled = false,
     ingredients =
     {
@@ -1798,6 +1839,7 @@ data:extend({
   {
     type = "recipe",
     name = "planetaris-long-stack-inserter",
+    category = "electromagnetics",
     enabled = false,
     ingredients =
     {
