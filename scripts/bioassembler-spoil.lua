@@ -181,7 +181,7 @@ local function create_ghost(entity)
 
   local corpse_data = storage.corpse_data[entity.unit_number]
 
-  entity.surface.create_entity{
+  local ghost = entity.surface.create_entity{
     name = "entity-ghost",
     position = entity.position,
     direction = corpse_data and corpse_data.direction or entity.direction,
@@ -192,6 +192,56 @@ local function create_ghost(entity)
     recipe = corpse_data and corpse_data.recipe or nil,
     expires = false,
   }
+
+  if not ghost or not ghost.valid or not corpse_data then return end
+
+  -- Restore control behavior
+  if corpse_data.control_behavior then
+    local control = ghost.get_or_create_control_behavior()
+    if control then
+      local cb = corpse_data.control_behavior
+      if cb.circuit_enable_disable ~= nil then control.circuit_enable_disable = cb.circuit_enable_disable end
+      if cb.circuit_condition then control.circuit_condition = cb.circuit_condition end
+      if cb.connect_to_logistic_network ~= nil then control.connect_to_logistic_network = cb.connect_to_logistic_network end
+      if cb.logistic_condition then control.logistic_condition = cb.logistic_condition end
+      if cb.circuit_set_recipe ~= nil then control.circuit_set_recipe = cb.circuit_set_recipe end
+      if cb.circuit_read_contents ~= nil then
+        control.circuit_read_contents = cb.circuit_read_contents
+        if cb.circuit_read_contents == true and cb.include_in_crafting ~= nil then
+          control.include_in_crafting = cb.include_in_crafting
+        end
+      end
+      if cb.circuit_read_ingredients ~= nil then control.circuit_read_ingredients = cb.circuit_read_ingredients end
+      if cb.circuit_read_recipe_finished ~= nil then
+        control.circuit_read_recipe_finished = cb.circuit_read_recipe_finished
+        if cb.circuit_read_recipe_finished == true and cb.circuit_recipe_finished_signal then
+          control.circuit_recipe_finished_signal = cb.circuit_recipe_finished_signal
+        end
+      end
+      if cb.circuit_read_working ~= nil then
+        control.circuit_read_working = cb.circuit_read_working
+        if cb.circuit_read_working == true and cb.circuit_working_signal then
+          control.circuit_working_signal = cb.circuit_working_signal
+        end
+      end
+    end
+  end
+
+  -- Restore circuit connections
+  if corpse_data.circuit_connections and #corpse_data.circuit_connections > 0 then
+    for _, conn_data in pairs(corpse_data.circuit_connections) do
+      if conn_data.target_entity and conn_data.target_entity.valid then
+        local source_connector_id = conn_data.wire_type == defines.wire_type.red
+          and defines.wire_connector_id.circuit_red
+          or defines.wire_connector_id.circuit_green
+        local source_connector = ghost.get_wire_connector(source_connector_id, true)
+        local target_connector = conn_data.target_entity.get_wire_connector(conn_data.target_connector_id, true)
+        if source_connector and target_connector then
+          pcall(function() source_connector.connect_to(target_connector, false) end)
+        end
+      end
+    end
+  end
 end
 
 -- on_entity_died
