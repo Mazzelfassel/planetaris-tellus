@@ -1,4 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.17
+Date: 2026-04-12
+  Features:
+    - Now living machines after failing reviving will leave a ghost
+    - Added two new easy mode settings
+    - Added setting to living machine no longer receive damage while not working
+    - Added setting to make tellus spoilable items last 50% longer
+  Changes:
+    - Now dead bioassemblers and incubators save the entity mirroring
+    - Added nutrients to bioassembling and pathologics recipes to avoid inserters getting stuck with nutrients
+    - Moved Robowasp and port, three long handed inserter and long stack inserter recipes to the electromagnetics category
+  Balancing:
+    - Reduced by 50% wasps spawners
+---------------------------------------------------------------------------------------------------
 Version: 1.0.16
 Date: 2026-04-12
   Changes:

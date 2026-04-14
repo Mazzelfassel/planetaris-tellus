@@ -71,3 +71,30 @@ if settings.startup["tellus-packs-for-promethium"].value == true then
     PlanetarisLib.add_tech_ingredient_if_missing("research-productivity", "planetaris-pathological-science-pack")
     PlanetarisLib.add_tech_prerequisite_if_missing("research-productivity", "planetaris-pathological-science-pack")
 end
+
+if settings.startup["tellus-easy-not-damage-while-stop"].value == true then
+    if data.raw["assembling-machine"]["planetaris-bioassembler"] then
+        data.raw["assembling-machine"]["planetaris-bioassembler"].production_health_effect = {producing = -2 / 60}
+    end
+
+    if data.raw["assembling-machine"]["planetaris-incubator"] then
+        data.raw["assembling-machine"]["planetaris-incubator"].production_health_effect = {producing = -2 / 60}
+    end
+end
+
+if settings.startup["tellus-easy-longer-spoiling"].value == true then
+
+    local tellus_subgroups = {
+        ["tellus-basic-processes"] = true,
+        ["tellus-pathological-processes"] = true,
+        ["tellus-other-planet-agriculture"] = true,
+        ["tellus-advanced-processes"] = true
+    }
+
+    for _, spoilable in pairs(data.raw.item) do
+        if tellus_subgroups[spoilable.subgroup] and spoilable.spoil_ticks ~= nil then
+            spoilable.spoil_ticks = spoilable.spoil_ticks * 1.5
+        end
+    end
+
+end
