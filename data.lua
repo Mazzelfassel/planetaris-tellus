@@ -9,6 +9,7 @@ require("prototypes.entity.explosion")
 require("prototypes.entity.flying-robot")
 require("prototypes.entity.incubator")
 require("prototypes.entity.plants")
+require("prototypes.entity.preservation-unit")
 require("prototypes.entity.remnants")
 require("prototypes.entity.replacements")
 require("prototypes.entity.root")
@@ -24,21 +25,22 @@ require("prototypes.fluid")
 require("prototypes.item-groups")
 require("prototypes.item")
 require("prototypes.pollen")
---require("prototypes.preservation-item")
 require("prototypes.recipe")
 require("prototypes.technology")
 require("prototypes.tips-and-tricks")
 
 --------------------- Compat
+preservation_whitelist = {}
+preservation_blacklist = {}
+spoilable_subgroups = {}
 
 require("compat.arig")
 require("compat.hyarion")
 require("compat.msppr")
+require("compat.preserving-groups")
 require("compat.maraxsis")
 require("compat.visible-planets")
 
-
-lib.add_to_blacklist("nutrients")
 
 local replace_base_game_simulations = false
 local planetaris_menu_simulations = require("__planetaris-tellus__/menu-simulations/menu-simulations")

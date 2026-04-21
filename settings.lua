@@ -33,6 +33,20 @@ data.extend({
 		setting_type = "startup",
 		default_value = false,
 		order = "b-b-b",
+	},
+	{
+		type = "bool-setting",
+		name = "hide-preserved-items",
+		setting_type = "startup",
+		default_value = false,
+		order = "c-a",
+	},
+	{
+		type = "bool-setting",
+		name = "hide-preserved-recipes",
+		setting_type = "startup",
+		default_value = false,
+		order = "c-a",
 	}
 })
 

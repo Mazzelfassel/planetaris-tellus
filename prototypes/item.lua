@@ -379,6 +379,25 @@ data:extend({
     weight = 20 * kg,
   },
 
+-- PRESERVATION
+
+  {
+    type = "item",
+    name = "planetaris-preservation-unit",
+    localised_name = {"entity-name.planetaris-preservation-unit"},
+    localised_description = {"entity-description.planetaris-preservation-unit"},
+    icon = "__planetaris-tellus__/graphics/icons/preservation-unit.png",
+    subgroup = "tellus-production",
+    order = "a-d",
+    place_result = "planetaris-preservation-unit",
+    inventory_move_sound = space_age_item_sounds.agriculture_inventory_move,
+    pick_sound = space_age_item_sounds.agriculture_inventory_pickup,
+    drop_sound = space_age_item_sounds.agriculture_inventory_move,
+    stack_size = 50,
+    default_import_location = "tellus",
+    weight = 100 * kg,
+  },
+
 -- Cleaning
 
   {

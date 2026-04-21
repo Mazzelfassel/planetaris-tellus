@@ -1,4 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 2026-04-20
+  Features:
+    - Added preservation unit
+    - Added preservation recipes to all spoilable items
+    - Added Planetaris Dyes
+  Changes:
+    - Removed space preservation preservation script and technologies 
+  Graphics:
+    - Optimized graphics
+  Bugfixes:
+    - Fixed three long handed inserter missing heating energy
+    - Fixed fluid icon of the root filler being too big
+---------------------------------------------------------------------------------------------------
 Version: 1.0.18
 Date: 2026-04-12
   Bugfixes:
