@@ -78,7 +78,7 @@ for _, spoilable_item in pairs(preservation_whitelist) do
       preserved_item.fuel_category = nil
       preserved_item.fuel_value = nil
       preserved_item.hidden_in_factoriopedia = settings.startup["hide-preserved-items"].value
-      preserved_item.weight = preserved_item.weight * 2
+      if preserved_item.weight then preserved_item.weight = 100 * kg end
       preserved_item.subgroup = "tellus-preserved"
 
       data.extend({preserved_item})
