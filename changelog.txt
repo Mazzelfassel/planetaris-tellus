@@ -5,7 +5,7 @@ Date: 2026-04-20
     - Fixed error generating weight of preserved items, now all preserved items weight 100 kg
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.0
-Date: 2026-04-20
+Date: 2026-04-22
   Features:
     - Added preservation unit
     - Added preservation recipes to all spoilable items
