@@ -28,4 +28,8 @@ data:extend(
     type = "recipe-category",
     name = "planetaris-air-cleaning",
   },
+  {
+    type = "recipe-category",
+    name = "preserving",
+  },
 })

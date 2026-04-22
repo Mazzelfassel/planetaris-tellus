@@ -1851,6 +1851,30 @@ data:extend({
     results = {{type="item", name="planetaris-long-stack-inserter", amount=1}}
   },
 
+-- PRESERVATION UNIT
+
+  {
+    type = "recipe",
+    name = "planetaris-preservation-unit",
+    category = "electromagnetics",
+    enabled = false,
+    surface_conditions =
+    {
+      {
+        property = "gravity",
+        max = 0
+      }
+    },
+    ingredients =
+    {
+      {type = "item", name = "planetaris-magnesium-sheet", amount = 50},
+      {type = "item", name = "tungsten-plate", amount = 100},
+      {type = "item", name = "processing-unit", amount = 20},
+      {type = "item", name = "electric-engine-unit", amount = 15}
+    },
+    results = {{type="item", name="planetaris-preservation-unit", amount=1}}
+  },
+
 -- ROCKET
 
   {

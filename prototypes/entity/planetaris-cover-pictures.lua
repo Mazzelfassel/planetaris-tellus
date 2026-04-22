@@ -245,3 +245,66 @@ planetaris_purifier_cover_pictures = function()
   }
   return layers
 end
+
+planetaris_preserver_cover_pictures = function()
+  local layers =
+  {
+    north =
+    {
+      layers =
+      {
+        {
+        filename = "__planetaris-tellus__/graphics/entity/preservation-unit/preservation-unit-pipe-north.png",
+        priority = "high",
+        width = 64,
+        height = 64,
+        scale = 0.5,
+        shift = util.by_pixel(0, 13)
+        },
+      }
+    },
+    east =
+    {
+      layers =
+      {
+        {
+        filename = "__planetaris-tellus__/graphics/entity/preservation-unit/preservation-unit-pipe-east.png",
+        priority = "extra-high",
+        width = 64,
+        height = 64,
+        scale = 0.5,
+        shift = util.by_pixel(-20, 0)
+        },
+      }
+    },
+    south =
+    {
+      layers =
+      {
+        {
+        filename = "__planetaris-tellus__/graphics/entity/preservation-unit/preservation-unit-pipe-south.png",
+        priority = "extra-high",
+        width = 64,
+        height = 64,
+        scale = 0.5,
+        shift = util.by_pixel(0, -20)
+        },
+      }
+    },
+    west =
+    {
+      layers =
+      {
+        {
+        filename = "__planetaris-tellus__/graphics/entity/preservation-unit/preservation-unit-pipe-west.png",
+        priority = "extra-high",
+        width = 64,
+        height = 64,
+        scale = 0.5,
+        shift = util.by_pixel(20, 0)
+        },
+      }
+    }
+  }
+  return layers
+end

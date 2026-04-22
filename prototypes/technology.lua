@@ -840,18 +840,16 @@ data.extend({
 
     {
     type = "technology",
-    name = "planetaris-space-preservation-1",
-    localised_description = {"technology-description.planetaris-space-preservation-1", "technology-effect.planetaris-space-preservation-exclusion"},
+    name = "planetaris-space-preservation",
     icons = PlanetarisLib.technology_icon_constant_preservation("__planetaris-tellus__/graphics/technology/space-preservation.png"),
     effects =
     {
       {
-        type = "nothing",
-        icon = "__planetaris-tellus__/graphics/icons/space-preservation.png",
-        effect_description = {"technology-effect.planetaris-space-preservation-1"},
+        type = "unlock-recipe",
+        recipe = "planetaris-preservation-unit"
       },
     },
-    prerequisites = {"planetaris-bioengineering-science-pack"},
+    prerequisites = {"planetaris-pathological-science-pack"},
     unit =
     {
       count = 2000,
@@ -864,78 +862,11 @@ data.extend({
         {"utility-science-pack",         1},
         {"space-science-pack",           1},
         {"agricultural-science-pack",    1},
-        {"planetaris-bioengineering-science-pack",  1}
-      },
-      time = 60
-    },
-    upgrade = true
-  },
-  {
-    type = "technology",
-    name = "planetaris-space-preservation-2",
-    localised_description = {"technology-description.planetaris-space-preservation-2"},
-    icons = PlanetarisLib.technology_icon_constant_preservation("__planetaris-tellus__/graphics/technology/space-preservation.png"),
-    effects =
-    {
-      {
-        type = "nothing",
-        icon = "__planetaris-tellus__/graphics/icons/space-preservation.png",
-        effect_description = {"technology-effect.planetaris-space-preservation-2"},
-      },
-    },
-    prerequisites = {"planetaris-space-preservation-1", "planetaris-pathological-science-pack"},
-    unit =
-    {
-      count = 800,
-      ingredients =
-      {
-        {"automation-science-pack",      1},
-        {"logistic-science-pack",        1},
-        {"chemical-science-pack",        1},
-        {"production-science-pack",      1},
-        {"utility-science-pack",         1},
-        {"space-science-pack",           1},
-        {"agricultural-science-pack",    1},
         {"planetaris-bioengineering-science-pack",  1},
-        {"planetaris-pathological-science-pack",    1}
+        {"planetaris-pathological-science-pack",  1}
       },
-      time = 60
+      time = 30
     },
-    upgrade = true
-  },
-  {
-    type = "technology",
-    name = "planetaris-space-preservation-3",
-    localised_description = {"technology-description.planetaris-space-preservation-3"},
-    icons = PlanetarisLib.technology_icon_constant_preservation("__planetaris-tellus__/graphics/technology/space-preservation.png"),
-    effects =
-    {
-      {
-        type = "nothing",
-        icon = "__planetaris-tellus__/graphics/icons/space-preservation.png",
-        effect_description = { "technology-effect.planetaris-space-preservation-3", "technology-effect.planetaris-space-preservation-exclusion" },
-      },
-    },
-    prerequisites = {"planetaris-space-preservation-2"},
-    unit =
-    {
-      count = 5000,
-      ingredients =
-      {
-        {"automation-science-pack",                 1},
-        {"logistic-science-pack",                   1},
-        {"chemical-science-pack",                   1},
-        {"production-science-pack",                 1},
-        {"utility-science-pack",                    1},
-        {"space-science-pack",                      1},
-        {"agricultural-science-pack",               1},
-        {"planetaris-bioengineering-science-pack",  1},
-        {"planetaris-pathological-science-pack",    1},
-        {"promethium-science-pack",                 1}
-      },
-      time = 60
-    },
-    upgrade = true
   },
 
 ----------------------- Prod Techs

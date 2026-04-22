@@ -155,3 +155,8 @@ data.extend({
 if data.raw["space-connection"]["nauvis-tellus"] then
   data.raw["space-connection"]["nauvis-tellus"] = nil
 end
+
+-- Add items to preservation unit
+if spoilable_subgroups then
+  table.insert(spoilable_subgroups, "arig-processes")
+end

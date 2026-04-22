@@ -128,6 +128,14 @@ function PlanetarisLib.table_contains(t, value)
 	return false
 end
 
+--- @param target table
+--- @param source table
+function PlanetarisLib.table_merge(target, source)
+    for _, v in pairs(source) do
+        table.insert(target, v)
+    end
+end
+
 ---------------------------------------------------------------------------
 ------------------------- Items
 ---------------------------------------------------------------------------

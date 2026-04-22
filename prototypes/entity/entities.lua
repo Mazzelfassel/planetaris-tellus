@@ -462,7 +462,7 @@ data.extend({
         percent = 60
       }
     },
-    icon_draw_specification = {scale = 1.5, shift = {0, -0.3}},
+    icon_draw_specification = {scale = 0.5, shift = {0, -0.3}},
     fluid_box =
     {
       volume = 2000,
@@ -1038,6 +1038,7 @@ data.extend({
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 0.1, result = "planetaris-three-long-handed-inserter"},
     max_health = 250,
+    heating_energy = "50kW",
     corpse = "three-long-handed-inserter-remnants",
     dying_explosion = "long-handed-inserter-explosion",
     resistances =
