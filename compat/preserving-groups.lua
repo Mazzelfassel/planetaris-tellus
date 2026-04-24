@@ -11,9 +11,7 @@ local function add_preserving_item(item)
 end
 
 local function blacklist_preserving_item(item)
-    if data.raw.item[item] or data.raw.capsule[item] or data.raw.tool[item] then
         table.insert(preservation_blacklist, item)
-    end
 end
 
 
@@ -32,6 +30,31 @@ end
 
 if mods["Moshine"] then
     blacklist_preserving_item("3d-data-storage")
+end
+
+if mods["rubia"] then
+    blacklist_preserving_item("yeet-agricultural-science-pack")
+    blacklist_preserving_item("yeet-ai-tier-10")
+    blacklist_preserving_item("yeet-biorecycling-science-pack")
+    blacklist_preserving_item("yeet-carbon-fiber")
+    blacklist_preserving_item("yeet-cryogenic-science-pack")
+    blacklist_preserving_item("yeet-dream-concentrate-barrel")
+    blacklist_preserving_item("yeet-electric-coil")
+    blacklist_preserving_item("yeet-electrochemical-science-pack")
+    blacklist_preserving_item("yeet-electromagnetic-science-pack")
+    blacklist_preserving_item("yeet-ghetto-biorecycling-science-pack")
+    blacklist_preserving_item("yeet-gun-turret")
+    blacklist_preserving_item("yeet-liquid-tiberium-barrel")
+    blacklist_preserving_item("yeet-lubricant-barrel")
+    blacklist_preserving_item("yeet-maraxsis-glass-panes")
+    blacklist_preserving_item("yeet-metallurgic-science-pack")
+    blacklist_preserving_item("yeet-plutonium-239")
+    blacklist_preserving_item("yeet-rabbasca-energetic-concrete")
+    blacklist_preserving_item("yeet-raw-fish")
+    blacklist_preserving_item("yeet-rubia-biofusion-science-pack")
+    blacklist_preserving_item("yeet-spoilage")
+    blacklist_preserving_item("yeet-steam-recycler")
+    blacklist_preserving_item("yeet-wood")
 end
 
 if mods["foliax"] then

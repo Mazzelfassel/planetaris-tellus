@@ -96,7 +96,7 @@ for _, spoilable_item in pairs(preservation_whitelist) do
       if preserved_item.place_result then preserved_item.place_result = nil end
       if preserved_item.place_as_tile then preserved_item.place_as_tile = nil end
       preserved_item.pictures = nil
-      preserved_item.spoil_ticks = preserved_item.spoil_ticks * 1.5
+      preserved_item.spoil_ticks = math.min(4294967295, preserved_item.spoil_ticks * 1.5)
       preserved_item.fuel_category = nil
       preserved_item.fuel_value = nil
       preserved_item.fuel_acceleration_multiplier = nil
@@ -130,6 +130,7 @@ for _, spoilable_item in pairs(preservation_whitelist) do
           auto_recycle = false,
           allow_productivity = false,
           reset_freshness_on_craft = false,
+          hide_from_player_crafting = true,
           energy_required = 1,
           ingredients =
           {
@@ -161,6 +162,7 @@ for _, spoilable_item in pairs(preservation_whitelist) do
           auto_recycle = false,
           allow_productivity = false,
           reset_freshness_on_craft = false,
+          hide_from_player_crafting = true,
           energy_required = 1,
           ingredients =
           {

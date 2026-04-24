@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.3
+Date: 2026-04-24
+  Compatibility:
+    - Blacklisted Yeet recipes from rubia
+  Bugfixes:
+    - Fixed some preserved items exceeding the spoilage ticks limit
+    - Fixed preserving recipes showing in the players hand crafting menu
+---------------------------------------------------------------------------------------------------
 Version: 1.1.2
 Date: 2026-04-20
   Bugfixes:
