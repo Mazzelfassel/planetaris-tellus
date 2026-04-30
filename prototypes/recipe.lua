@@ -900,6 +900,8 @@ data:extend({
     name = "planetaris-dequarantined-nauvian-parasite",
     icon = "__planetaris-tellus__/graphics/icons/dequarantined-nauvian-parasite.png",
     category = "advanced-crafting",
+    subgroup = "tellus-pathological-processes",
+    order = "b[nauvis]-a[parasite]-b-b",
     energy_required = 2,
     surface_conditions =
     {
@@ -931,6 +933,8 @@ data:extend({
     name = "planetaris-dequarantined-glebian-parasite",
     icon = "__planetaris-tellus__/graphics/icons/dequarantined-glebian-parasite.png",
     category = "advanced-crafting",
+    subgroup = "tellus-pathological-processes",
+    order = "b[nauvis]-a[parasite]-b-d",
     energy_required = 2,
     surface_conditions =
     {
