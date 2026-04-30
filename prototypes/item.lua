@@ -454,7 +454,7 @@ data:extend({
           {
             {
               type = "create-entity",
-              entity_name = "big-wasp",
+              entity_name = "big-wasp-premature",
               affects_target = true,
               show_in_tooltip = true,
               as_enemy = true,
@@ -471,7 +471,7 @@ data:extend({
                   {
                     {
                       type = "create-entity",
-                      entity_name = "big-wasp",
+                      entity_name = "big-wasp-premature",
                       affects_target = true,
                       show_in_tooltip = false,
                       as_enemy = true,
@@ -515,7 +515,7 @@ data:extend({
           {
             {
               type = "create-entity",
-              entity_name = "behemoth-wasp",
+              entity_name = "behemoth-wasp-premature",
               repeat_count = 2,
               affects_target = true,
               show_in_tooltip = true,
@@ -533,7 +533,7 @@ data:extend({
                   {
                     {
                       type = "create-entity",
-                      entity_name = "behemoth-wasp",
+                      entity_name = "behemoth-wasp-premature",
                       affects_target = true,
                       show_in_tooltip = false,
                       as_enemy = true,
@@ -1001,7 +1001,7 @@ data:extend({
           {
             {
               type = "create-entity",
-              entity_name = "behemoth-wasp",
+              entity_name = "behemoth-wasp-premature",
               repeat_count = 3,
               affects_target = true,
               show_in_tooltip = true,
@@ -1019,7 +1019,7 @@ data:extend({
                   {
                     {
                       type = "create-entity",
-                      entity_name = "behemoth-wasp",
+                      entity_name = "behemoth-wasp-premature",
                       affects_target = true,
                       show_in_tooltip = false,
                       as_enemy = true,
