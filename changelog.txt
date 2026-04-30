@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.4
+Date: 2026-04-30
+  Changes:
+    - Now Wasp eggs, Tellurian parasites and Pathological science packs will spoil into premature wasps.
+  Bugfixes:
+    - Fixed Dequarantine recipes not working
+    - Fixed living machines not saving recipe quality when reviving
+---------------------------------------------------------------------------------------------------
 Version: 1.1.3
 Date: 2026-04-24
   Compatibility:

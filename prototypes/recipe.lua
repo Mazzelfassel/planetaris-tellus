@@ -913,12 +913,12 @@ data:extend({
     auto_recycle = false,
     emissions_multiplier = 2,
     ingredients = {
-      {type = "item",  name = "planetaris-nauvian-parasite", amount = 1},
-      {type = "item",  name = "barrel", amount = 1},
+      {type = "item", name = "planetaris-quarantined-nauvian-parasite", amount = 1},
     },
     results =
     {
-      {type = "item", name = "planetaris-quarantined-nauvian-parasite", amount = 1},
+      {type = "item",  name = "planetaris-nauvian-parasite", amount = 1},
+      {type = "item",  name = "barrel", amount = 1},
     },
     crafting_machine_tint =
     {
@@ -943,12 +943,12 @@ data:extend({
     enabled = false,
     auto_recycle = false,
     ingredients = {
-      {type = "item",  name = "planetaris-glebian-parasite", amount = 1},
-      {type = "item",  name = "barrel", amount = 1},
+      {type = "item", name = "planetaris-quarantined-glebian-parasite", amount = 1},
     },
     results =
     {
-      {type = "item", name = "planetaris-quarantined-glebian-parasite", amount = 2},
+      {type = "item",  name = "planetaris-glebian-parasite", amount = 1},
+      {type = "item",  name = "barrel", amount = 1},
     },
     crafting_machine_tint =
     {

@@ -71,7 +71,7 @@ local function rebuild_assembler(corpse, data)
 
   if new_assembler and new_assembler.valid then
     if data.recipe then
-      new_assembler.set_recipe(data.recipe)
+      new_assembler.set_recipe(data.recipe, data.recipe_quality or "normal")
     end
 
     if data.rendering and data.rendering.valid then
@@ -190,6 +190,7 @@ local function create_ghost(entity)
     inner_name = original_name,
     quality = corpse_data and corpse_data.quality or "normal",
     recipe = corpse_data and corpse_data.recipe or nil,
+    recipe_quality = corpse_data and corpse_data.recipe_quality or nil,
     expires = false,
   }
 
@@ -278,7 +279,7 @@ local function on_entity_died(event)
   local corpse_name = assembler_to_corpse[entity.name]
   if not corpse_name then return end
 
-  local recipe = entity.get_recipe()
+  local recipe, recipe_quality = entity.get_recipe()
   local surface = entity.surface
   local position = entity.position
 
@@ -365,6 +366,7 @@ local function on_entity_died(event)
     -- Store with direct entity reference
     storage.corpse_data[corpse.unit_number] = {
       recipe = recipe and recipe.name or nil,
+      recipe_quality = recipe_quality and recipe_quality.name or nil,
       original_assembler = entity.name,
       rendering = nil,
       last_products_finished = corpse.products_finished or 0,
