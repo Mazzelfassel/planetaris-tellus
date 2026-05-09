@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.5
+Date: 2026-05-09
+  Balancing:
+    - Cactus mash recipe: Cactus mash 1 -> 2, Cactus seed chance 20%
+    - Unstable crystal manipulation recipe: unstable bacteria 1 -> 2
+    - Bacteriochlorophyll recipe: bacteriochlorophyll 10 -> 20
+    - Parasite nest recipe: polymer skin 5 -> 1
+    - Polymer skin recipe: crafting time 8 ->  4
+    - Pathological science pack recipe: crafting time 8 ->  4
+  Compatibility:
+    - Added Pelagos biter egg to enemy egg productivity
+    - Added Space age galore mod biter egg recipes to enemy egg productivity
+---------------------------------------------------------------------------------------------------
 Version: 1.1.4
 Date: 2026-04-30
   Changes:
