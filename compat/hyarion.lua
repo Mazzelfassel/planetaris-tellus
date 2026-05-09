@@ -441,7 +441,7 @@ data.extend({
     results =
     {
       {type = "item", name = "planetaris-unstable-crystallizer", amount = 1, probability = 0.030},
-      {type = "item", name = "planetaris-unstable-bacteria", amount = 1},
+      {type = "item", name = "planetaris-unstable-bacteria", amount = 3},
     },
     crafting_machine_tint =
     {

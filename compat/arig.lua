@@ -124,8 +124,8 @@ data.extend({
     },
     results =
     {
-      {type = "item", name = "planetaris-cactus-seeds", amount = 1, probability = 0.02},
-      {type = "item", name = "planetaris-cactus-mash", amount = 1},
+      {type = "item", name = "planetaris-cactus-seeds", amount = 1, probability = 0.2},
+      {type = "item", name = "planetaris-cactus-mash", amount = 2},
     },
     crafting_machine_tint =
     {

@@ -1,4 +1,6 @@
 require("compat.celestial-weather")
 require("compat.k2so")
+require("compat.pelagos")
 require("compat.science-group")
+require("compat.space-age-galore")
 require("prototypes.preservation-item")

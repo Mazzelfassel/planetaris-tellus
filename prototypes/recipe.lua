@@ -529,13 +529,13 @@ data:extend({
     emissions_multiplier = 5,
     ingredients = {
       {type = "fluid", name = "planetaris-chlorophyll", amount = 10},
-      {type = "item",  name = "planetaris-magnesium-bacteria", amount = 5},
+      {type = "item",  name = "planetaris-magnesium-bacteria", amount = 1},
       {type = "item",  name = "planetaris-wasp-egg", amount = 1},
       {type = "item", name = "nutrients", amount = 1}
     },
     results =
     {
-      {type = "fluid", name = "planetaris-bacteriochlorophyll", amount = 10},
+      {type = "fluid", name = "planetaris-bacteriochlorophyll", amount = 20},
     },
     crafting_machine_tint =
     {
@@ -1097,7 +1097,7 @@ data:extend({
       {type = "item", name = "planetaris-tellurian-parasite", amount = 1, ignored_by_stats = 1},
       {type = "item", name = "planetaris-nauvian-parasite", amount = 1, ignored_by_stats = 1},
       {type = "item", name = "planetaris-glebian-parasite", amount = 1, ignored_by_stats = 1},
-      {type = "item", name = "planetaris-polimer-skin", amount = 5},
+      {type = "item", name = "planetaris-polimer-skin", amount = 1},
       {type = "item", name = "nutrients", amount = 5},
       {type = "fluid", name = "water", amount = 60}
     },
@@ -1513,7 +1513,7 @@ data:extend({
     type = "recipe",
     name = "planetaris-polimer-skin",
     category = "planetaris-pathologics",
-    energy_required = 8,
+    energy_required = 4,
     surface_conditions =
     {
       {
@@ -1698,7 +1698,7 @@ data:extend({
     auto_recycle = false,
     result_is_always_fresh = true,
     reset_freshness_on_craft = true,
-    energy_required = 8,
+    energy_required = 4,
     ingredients = {
       {type = "item",  name = "planetaris-parasite-nest",      amount = 1},
       {type = "item",  name = "planetaris-carbolyte-bacteria", amount = 2},
