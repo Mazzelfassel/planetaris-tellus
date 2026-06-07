@@ -1,7 +1,5 @@
 if not mods["Krastorio2-spaced-out"] then return end
 
-require("PlanetarisLib")
-
 local data_util = require("__Krastorio2-spaced-out__/data-util")
 
 local function add_light(item)
@@ -259,6 +257,29 @@ data:extend({
 		auto_recycle = false,
 		result_is_always_fresh = true,
 		main_product = "planetaris-mushroom-cap",
+	},
+    {
+		type = "technology",
+		name = "kr-tellus-greenhouse",
+		icon = "__planetaris-tellus__/graphics/compat/k2so/technology/tellus-greenhouses.png",
+		icon_size = 256,
+		unit = {
+			time = 45,
+			count = 1000,
+			ingredients = {
+				{ "production-science-pack", 1 },
+				{ "utility-science-pack", 1 },
+				{ kr_optimization_tech_card_name, 1 },
+				{ "kr-advanced-tech-card", 1 },
+				{ "agricultural-science-pack", 1 },
+                { "planetaris-bioengineering-science-pack",  1},
+			},
+		},
+		prerequisites = { "planetaris-bioengineering-science-pack", "kr-advanced-tech-card" },
+		effects = {
+			{ type = "unlock-recipe", recipe = "kr-chloroplast-fruit" },
+			{ type = "unlock-recipe", recipe = "kr-mushroom-cap" },
+		},
 	},
 })
 

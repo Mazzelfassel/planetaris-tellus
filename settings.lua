@@ -13,6 +13,13 @@ data.extend({
 		default_value = false,
 		order = "a-b-b",
 	},
+	{
+		type = "bool-setting",
+		name = "tellus-easy-spoiling-enemies",
+		setting_type = "startup",
+		default_value = false,
+		order = "a-b-c",
+	},
     {
 		type = "bool-setting",
 		name = "tellus-packs-for-aquilo",

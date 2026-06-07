@@ -14,10 +14,6 @@ if settings.startup["adjust-maraxsis"].value == true then
         data.raw["space-connection"]["fulgora-maraxsis"] = nil
     end
 
-    if data.raw["space-connection"]["maraxsis-arig"] and data.raw["planet"]["arig"] then
-        data.raw["space-connection"]["maraxsis-arig"] = nil
-    end
-
     if data.raw["space-connection"]["maraxsis-hyarion"] and data.raw["planet"]["hyarion"] then
         data.raw["space-connection"]["maraxsis-hyarion"].length = 30000
     end

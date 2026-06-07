@@ -1,7 +1,7 @@
 
 --------------------- Compat
 
-require("PlanetarisLib")
+PlanetarisLib = require("PlanetarisLib")
 
 table.insert(data.raw.item.landfill.place_as_tile.tile_condition, "wetland-tellus-light-dead-skin")
 table.insert(data.raw.item.landfill.place_as_tile.tile_condition, "wetland-tellus-dead-skin")
@@ -97,4 +97,217 @@ if settings.startup["tellus-easy-longer-spoiling"].value == true then
         end
     end
 
+end
+
+if settings.startup["tellus-easy-spoiling-enemies"].value == true then
+
+    local one_medium_premature_wasp = {
+                type = "direct",
+                action_delivery =
+                {
+                type = "instant",
+                source_effects =
+                {
+                    {
+                    type = "create-entity",
+                    entity_name = "medium-wasp-premature",
+                    repeat_count = 1,
+                    affects_target = true,
+                    show_in_tooltip = true,
+                    as_enemy = true,
+                    find_non_colliding_position = true,
+                    abort_if_over_space = true,
+                    offset_deviation = {{-5, -5}, {5, 5}},
+                    non_colliding_fail_result =
+                    {
+                        type = "direct",
+                        action_delivery =
+                        {
+                        type = "instant",
+                        source_effects =
+                        {
+                            {
+                            type = "create-entity",
+                            entity_name = "medium-wasp-premature",
+                            affects_target = true,
+                            show_in_tooltip = false,
+                            as_enemy = true,
+                            offset_deviation = {{-1, -1}, {1, 1}},
+                            }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+    local two_medium_premature_wasp = {
+                type = "direct",
+                action_delivery =
+                {
+                type = "instant",
+                source_effects =
+                {
+                    {
+                    type = "create-entity",
+                    entity_name = "medium-wasp-premature",
+                    repeat_count = 2,
+                    affects_target = true,
+                    show_in_tooltip = true,
+                    as_enemy = true,
+                    find_non_colliding_position = true,
+                    abort_if_over_space = true,
+                    offset_deviation = {{-5, -5}, {5, 5}},
+                    non_colliding_fail_result =
+                    {
+                        type = "direct",
+                        action_delivery =
+                        {
+                        type = "instant",
+                        source_effects =
+                        {
+                            {
+                            type = "create-entity",
+                            entity_name = "medium-wasp-premature",
+                            affects_target = true,
+                            show_in_tooltip = false,
+                            as_enemy = true,
+                            offset_deviation = {{-1, -1}, {1, 1}},
+                            }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+    local one_medium_biter = {
+                type = "direct",
+                action_delivery =
+                {
+                type = "instant",
+                source_effects =
+                {
+                    type = "create-entity",
+                    entity_name = "medium-biter",
+                    repeat_count = 1,
+                    affects_target = true,
+                    show_in_tooltip = true,
+                    as_enemy = true,
+                    find_non_colliding_position = true,
+                    abort_if_over_space = true,
+                    offset_deviation = {{-5, -5}, {5, 5}},
+                    non_colliding_fail_result =
+                    {
+                        type = "direct",
+                        action_delivery =
+                        {
+                        type = "instant",
+                        source_effects =
+                        {
+                            {
+                            type = "create-entity",
+                            entity_name = "medium-biter",
+                            affects_target = true,
+                            show_in_tooltip = false,
+                            as_enemy = true,
+                            offset_deviation = {{-1, -1}, {1, 1}},
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+
+    local one_big_wriggler_pentapod_premature = {
+                type = "direct",
+                action_delivery =
+                {
+                type = "instant",
+                source_effects =
+                {
+                    {
+                    type = "create-entity",
+                    entity_name = "big-wriggler-pentapod-premature",
+                    repeat_count = 1,
+                    affects_target = true,
+                    show_in_tooltip = true,
+                    as_enemy = true,
+                    find_non_colliding_position = true,
+                    abort_if_over_space = true,
+                    offset_deviation = {{-5, -5}, {5, 5}},
+                    non_colliding_fail_result =
+                    {
+                        type = "direct",
+                        action_delivery =
+                        {
+                        type = "instant",
+                        source_effects =
+                        {
+                            {
+                            type = "create-entity",
+                            entity_name = "big-wriggler-pentapod-premature",
+                            affects_target = true,
+                            show_in_tooltip = false,
+                            as_enemy = true,
+                            offset_deviation = {{-1, -1}, {1, 1}},
+                            }
+                          }
+                        }
+                      }
+                    }
+                }
+            }
+        }
+
+    if data.raw["tool"]["planetaris-pathological-science-pack"] then
+        data.raw["tool"]["planetaris-pathological-science-pack"].spoil_to_trigger_result =
+            {
+            items_per_trigger = 1,
+            trigger = two_medium_premature_wasp
+            }
+    end
+
+    if data.raw["item"]["planetaris-parasite-nest"] then
+        data.raw["item"]["planetaris-parasite-nest"].spoil_to_trigger_result =
+            {
+            items_per_trigger = 1,
+            trigger = {one_medium_premature_wasp, one_medium_biter, one_big_wriggler_pentapod_premature}
+            }
+    end
+
+    if data.raw["item"]["planetaris-wasp-egg"] then
+        data.raw["item"]["planetaris-wasp-egg"].spoil_to_trigger_result =
+            {
+            items_per_trigger = 1,
+            trigger = one_medium_premature_wasp
+          }
+    end
+
+    if data.raw["item"]["planetaris-tellurian-parasite"] then
+        data.raw["item"]["planetaris-tellurian-parasite"].spoil_to_trigger_result =
+            {
+            items_per_trigger = 1,
+            trigger = one_medium_premature_wasp
+          }
+    end
+
+    if data.raw["item"]["planetaris-nauvian-parasite"] then
+        data.raw["item"]["planetaris-nauvian-parasite"].spoil_to_trigger_result =
+            {
+            items_per_trigger = 1,
+            trigger = one_medium_biter
+          }
+    end
+
+if data.raw["item"]["planetaris-glebian-parasite"] then
+        data.raw["item"]["planetaris-glebian-parasite"].spoil_to_trigger_result =
+            {
+            items_per_trigger = 1,
+            trigger = one_big_wriggler_pentapod_premature
+          }
+    end 
 end

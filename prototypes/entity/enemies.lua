@@ -1162,17 +1162,23 @@ data:extend(
 
 ----------------------------------------- PREMATURE
 
+local medium_wasp_premature = table.deepcopy(data.raw.unit["medium-wasp"])
 local big_wasp_premature = table.deepcopy(data.raw.unit["big-wasp"])
 local behemoth_wasp_premature = table.deepcopy(data.raw.unit["behemoth-wasp"])
 
+medium_wasp_premature.name = "medium-wasp-premature"
+medium_wasp_premature.order="t-e"
+medium_wasp_premature.icon = "__planetaris-tellus__/graphics/icons/premature-wasp.png"
+medium_wasp_premature.healing_per_tick = -big_wasp_premature.max_health/50/60
+
 big_wasp_premature.name = "big-wasp-premature"
-big_wasp_premature.order="t-e"
+big_wasp_premature.order="t-f"
 big_wasp_premature.icon = "__planetaris-tellus__/graphics/icons/premature-wasp.png"
 big_wasp_premature.healing_per_tick = -big_wasp_premature.max_health/50/60
 
 behemoth_wasp_premature.name = "behemoth-wasp-premature"
-behemoth_wasp_premature.order="t-f"
+behemoth_wasp_premature.order="t-g"
 behemoth_wasp_premature.icon = "__planetaris-tellus__/graphics/icons/premature-wasp.png"
 behemoth_wasp_premature.healing_per_tick = -big_wasp_premature.max_health/50/60
 
-data.extend({big_wasp_premature, behemoth_wasp_premature})
+data.extend({big_wasp_premature, behemoth_wasp_premature, medium_wasp_premature})
