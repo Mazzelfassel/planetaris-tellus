@@ -1,5 +1,3 @@
-require("PlanetarisLib")
-
 data:extend({
     {
       type = "technology",

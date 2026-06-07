@@ -133,8 +133,47 @@ data.extend({
       secondary = {0.929, 0.549, 0.737, 1},
     }
   },
+    {
+    type = "recipe",
+    name = "planetaris-chlorophyll-mashing",
+    icons = {
+        {icon="__planetaris-tellus__/graphics/icons/chloroplast-fruit.png", draw_background=false},
+        {icon="__planetaris-tellus__/graphics/icons/fluids/chlorophyll.png",  shift={12, 12}, scale=0.5},
+      },
+    icon = "__planetaris-tellus__/graphics/icons/chloroplast-processing.png",
+    category = "compressing",
+    subgroup = "tellus-basic-processes",
+    order = "a[natural]-c[Chlorophyll]-b-b[fruit]-b",
+    surface_conditions =
+    {
+      {
+        property = "planetaris-pollen-corrosion",
+        min = 50,
+        max = 100
+      }
+    },
+    enabled = false,
+    auto_recycle = false,
+    allow_productivity = false,
+    energy_required = 1,
+    ingredients = {
+      {type = "item", name = "planetaris-chloroplast-fruit", amount = 1},
+    },
+    results =
+    {
+      {type = "item", name = "planetaris-chloroplast-seed", amount = 1, probability = 0.02},
+      {type = "fluid", name = "planetaris-chlorophyll", amount = 25}
+    },
+    crafting_machine_tint =
+    {
+      primary = {r = 0.45, g = 0.98, b = 0.008, a = 0.500},
+      secondary = {r = 0.635, g = 0.8, b = 0.294, a = 0.500},
+    }
+  },
 
 })
+
+PlanetarisLib.add_tech_unlock("planetaris-bioengineering", "planetaris-chlorophyll-mashing")
 
 -- Space connection
 

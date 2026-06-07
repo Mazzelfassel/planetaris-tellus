@@ -1,4 +1,5 @@
 local lib = require("lib")
+PlanetarisLib = require("PlanetarisLib")
 require("prototypes.achievements")
 require("prototypes.categories.recipe-category")
 require("prototypes.decoratives.decoratives-tellus")
