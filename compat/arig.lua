@@ -162,7 +162,7 @@ data.extend({
     results =
     {
       {type = "item", name = "planetaris-chloroplast-seed", amount = 1, probability = 0.02},
-      {type = "fluid", name = "planetaris-chlorophyll", amount = 50}
+      {type = "fluid", name = "planetaris-chlorophyll", amount = 25}
     },
     crafting_machine_tint =
     {
