@@ -35,9 +35,9 @@ preservation_whitelist = {}
 preservation_blacklist = {}
 spoilable_subgroups = {}
 
-require("compat.k2so")
 require("compat.arig")
 require("compat.hyarion")
+require("compat.k2so")
 require("compat.msppr")
 require("compat.preserving-groups")
 require("compat.maraxsis")
